@@ -3,6 +3,8 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 description = "Spring Core"
 
 apply plugin: "kotlin"
+//添加解决 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar 报红
+apply plugin: 'com.github.johnrengelman.shadow'
 
 // spring-core includes asm and repackages cglib, inlining both into the spring-core jar.
 // cglib itself depends on asm and is therefore further transformed by the ShadowJar task to
